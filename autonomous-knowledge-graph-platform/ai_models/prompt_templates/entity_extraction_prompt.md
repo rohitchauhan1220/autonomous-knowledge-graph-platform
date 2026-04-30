@@ -1,0 +1,1 @@
+Extract enterprise entities from the provided text. Return JSON entities with `name`, `label`, and `attributes`. Prefer labels such as Person, Organization, Product, Supplier, Location, Risk, Metric, and Concept.

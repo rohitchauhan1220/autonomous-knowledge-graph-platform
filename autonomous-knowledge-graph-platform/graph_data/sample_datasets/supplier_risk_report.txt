@@ -1,0 +1,1 @@
+Atlas Logistics reported a 14% delivery delay risk for Q3 due to port congestion. Orion Cloud depends on Atlas Logistics for west region fulfillment. Procurement opened escalation ticket INC-2407 and requested mitigation from Northstar Systems.

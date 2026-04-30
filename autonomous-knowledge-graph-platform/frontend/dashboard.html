@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard | Knowledge Graph Platform</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+<body>
+  <div class="app-layout">
+    <aside class="sidebar">
+      <h2>IntelliGraph Platform</h2>
+      <nav>
+        <a class="active" href="dashboard.html">Dashboard</a>
+        <a href="graph.html">Graph</a>
+        <a href="query.html">Semantic Query</a>
+        <a href="admin.html">Settings</a>
+      </nav>
+    </aside>
+    <main class="workspace">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Command Center</p>
+          <h1>Enterprise Knowledge Operations</h1>
+        </div>
+        <div class="top-actions">
+          <button id="themeToggle" class="secondary">Theme</button>
+          <button id="logoutBtn" class="secondary">Logout</button>
+        </div>
+      </header>
+
+      <section id="metricGrid" class="metric-grid"></section>
+
+      <section class="split">
+        <div class="panel">
+          <h2>Ingest Enterprise Data</h2>
+          <form id="uploadForm" class="upload-form">
+            <select name="source_type">
+              <option value="text">Text</option>
+              <option value="pdf">PDF</option>
+              <option value="email">Email</option>
+              <option value="ticket">Ticket JSON</option>
+              <option value="csv">CSV</option>
+            </select>
+            <input name="file" type="file" required>
+            <button type="submit">Ingest & Build Graph</button>
+          </form>
+          <div id="uploadStatus" class="status"></div>
+        </div>
+        <div class="panel">
+          <h2>Recent Activity</h2>
+          <div id="activityList" class="activity-list"></div>
+        </div>
+      </section>
+      <section class="three-column">
+        <div class="panel">
+          <h2>Executive AI Insight</h2>
+          <p id="executiveHeadline" class="large-copy"></p>
+          <div id="recommendations" class="activity-list"></div>
+        </div>
+        <div class="panel">
+          <h2>Risk Heatmap</h2>
+          <div id="riskHeatmap" class="heatmap"></div>
+        </div>
+        <div class="panel">
+          <h2>System Health</h2>
+          <div id="healthPanel" class="activity-list"></div>
+        </div>
+      </section>
+      <section id="activityDetailModal" class="activity-modal" aria-hidden="true">
+        <div class="activity-modal-card">
+          <div class="activity-modal-header">
+            <div>
+              <p class="eyebrow">Activity Detail</p>
+              <h2 id="activityDetailTitle">Select an item</h2>
+            </div>
+            <div class="modal-actions">
+              <button type="button" id="openGraphFromActivity" class="secondary">Open Graph</button>
+              <button type="button" id="closeActivityDetail" class="secondary">Close</button>
+            </div>
+          </div>
+          <div id="activityDetailBody" class="activity-detail-body"></div>
+        </div>
+      </section>
+      <section id="metricDetailModal" class="activity-modal" aria-hidden="true">
+        <div class="activity-modal-card">
+          <div class="activity-modal-header">
+            <div>
+              <p class="eyebrow">Metric Detail</p>
+              <h2 id="metricDetailTitle">Select a metric</h2>
+            </div>
+            <button type="button" id="closeMetricDetail" class="secondary">Close</button>
+          </div>
+          <div id="metricDetailBody" class="activity-detail-body"></div>
+        </div>
+      </section>
+      <section id="editActivityModal" class="activity-modal" aria-hidden="true">
+        <div class="activity-modal-card">
+          <div class="activity-modal-header">
+            <div>
+              <p class="eyebrow">Edit Activity</p>
+              <h2 id="editActivityTitle">Edit item</h2>
+            </div>
+            <button type="button" id="closeEditModal" class="secondary">Close</button>
+          </div>
+          <form id="editActivityForm" class="activity-detail-body">
+            <div class="form-group">
+              <label for="editFieldOne">Field 1</label>
+              <input type="text" id="editFieldOne" placeholder="Enter value" required>
+            </div>
+            <div class="form-group">
+              <label for="editFieldTwo">Field 2</label>
+              <textarea id="editFieldTwo" placeholder="Enter value" rows="4"></textarea>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="primary">Save Changes</button>
+              <button type="button" id="cancelEditModal" class="secondary">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </section>
+  </div>
+  <script src="assets/js/api_service.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>

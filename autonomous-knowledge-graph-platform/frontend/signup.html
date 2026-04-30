@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign Up | Knowledge Graph Platform</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/auth.css">
+</head>
+<body class="auth-page">
+  <main class="auth-shell compact">
+    <section class="auth-card">
+      <h1>Create Account</h1>
+      <form id="signupForm">
+        <label>Name<input name="name" type="text" required></label>
+        <label>Email<input name="email" type="email" required></label>
+        <label>Password
+          <div class="password-control">
+            <input id="passwordInput" name="password" type="password" autocomplete="new-password" required>
+            <button id="togglePassword" class="icon-button" type="button" aria-label="Show password" title="Show password">Show</button>
+          </div>
+        </label>
+        <div class="password-tools">
+          <button id="generatePassword" class="secondary" type="button">Generate strong password</button>
+          <div class="strength-meter" aria-live="polite">
+            <span id="strengthBar"></span>
+          </div>
+          <p id="strengthText" class="muted">Use 12+ characters with upper, lower, number, and symbol.</p>
+        </div>
+        <label>Organization<input name="organization" type="text" value="Demo Enterprise"></label>
+        <label>Department<input name="department" type="text" value="Enterprise Intelligence"></label>
+        <label>Role
+          <select name="role">
+            <option value="analyst">Analyst</option>
+            <option value="manager">Manager</option>
+            <option value="admin">Admin</option>
+          </select>
+        </label>
+        <button type="submit">Create account</button>
+      </form>
+      <p class="muted auth-links">Already have an account? <a href="login.html">Sign in</a></p>
+    </section>
+  </main>
+  <script src="assets/js/api_service.js"></script>
+  <script src="assets/js/signup.js"></script>
+</body>
+</html>

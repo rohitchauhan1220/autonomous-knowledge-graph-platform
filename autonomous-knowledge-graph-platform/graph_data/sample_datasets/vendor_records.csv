@@ -1,0 +1,4 @@
+vendor,region,metric,status
+Atlas Logistics,West,14% delay risk,Escalated
+Northstar Systems,North,98% SLA,Healthy
+Orion Cloud,Global,3 days impact,At Risk

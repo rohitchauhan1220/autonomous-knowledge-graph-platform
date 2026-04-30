@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Graph | Knowledge Graph Platform</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+  <link rel="stylesheet" href="assets/css/graph.css">
+  <script src="https://unpkg.com/cytoscape@3.29.2/dist/cytoscape.min.js"></script>
+</head>
+<body>
+  <div class="app-layout">
+    <aside class="sidebar">
+      <h2>AKG Platform</h2>
+      <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a class="active" href="graph.html">Graph</a>
+        <a href="query.html">Semantic Query</a>
+        <a href="admin.html">Settings</a>
+      </nav>
+    </aside>
+    <main class="workspace">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Knowledge Graph</p>
+          <h1>Multi-hop Enterprise Relationship Map</h1>
+        </div>
+        <div class="top-actions">
+          <button id="treeLayoutBtn" class="secondary">Tree Layout</button>
+          <button id="forceLayoutBtn" class="secondary">Force Layout</button>
+          <button id="refreshGraph" class="secondary">Refresh</button>
+        </div>
+      </header>
+      <section class="graph-toolbar">
+        <input id="graphFilter" placeholder="Filter nodes by entity name">
+        <span id="graphStats"></span>
+      </section>
+      <section class="graph-layout">
+        <div id="cy"></div>
+        <section class="panel tree-summary">
+          <h2>Readable Tree</h2>
+          <div id="treeSummary" class="tree-summary-body"></div>
+        </section>
+        <aside class="panel graph-side">
+          <h2>Graph Evolution</h2>
+          <div id="versionTimeline" class="activity-list"></div>
+        </aside>
+      </section>
+    </main>
+  </div>
+  <script src="assets/js/api_service.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/graph_visualization.js"></script>
+</body>
+</html>

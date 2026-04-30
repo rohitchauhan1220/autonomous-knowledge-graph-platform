@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Settings | Knowledge Graph Platform</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+<body>
+  <div class="app-layout">
+    <aside class="sidebar">
+      <h2>AKG Platform</h2>
+      <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="graph.html">Graph</a>
+        <a href="query.html">Semantic Query</a>
+        <a class="active" href="admin.html">Settings</a>
+      </nav>
+    </aside>
+    <main class="workspace">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Configuration</p>
+          <h1>Platform Settings and Governance</h1>
+          <p id="settingsStatus" class="muted">Loading settings...</p>
+        </div>
+        <div class="top-actions">
+          <button id="addUserBtn" class="secondary" data-action="add-user">Add User</button>
+          <button id="addIntegrationBtn" class="secondary" data-action="add-integration">Add Integration</button>
+          <button id="addScheduleBtn" class="secondary" data-action="add-schedule">Add Schedule</button>
+        </div>
+      </header>
+      <section class="split">
+        <div class="panel"><h2>Users</h2><div id="usersList"></div></div>
+        <div class="panel"><h2>Audit Logs</h2><div id="auditList"></div></div>
+      </section>
+      <section class="split">
+        <div class="panel"><h2>Integrations Marketplace</h2><div id="integrationList"></div></div>
+        <div class="panel"><h2>Scheduled Ingestion</h2><div id="scheduleList"></div></div>
+      </section>
+    </main>
+  </div>
+  <script src="assets/js/api_service.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/admin.js"></script>
+</body>
+</html>

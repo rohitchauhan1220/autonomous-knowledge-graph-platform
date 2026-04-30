@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Query | Knowledge Graph Platform</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+<body>
+  <div class="app-layout">
+    <aside class="sidebar">
+      <h2>AKG Platform</h2>
+      <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="graph.html">Graph</a>
+        <a class="active" href="query.html">Semantic Query</a>
+        <a href="admin.html">Settings</a>
+      </nav>
+    </aside>
+    <main class="workspace">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Reasoning Assistant</p>
+          <h1>Ask Source-backed Enterprise Questions</h1>
+        </div>
+      </header>
+      <section class="query-console">
+        <div id="suggestions" class="suggestion-row"></div>
+        <form id="askForm">
+          <input name="question" placeholder="Example: Which suppliers have delivery risk?" required>
+          <button type="submit">Ask</button>
+        </form>
+        <article id="answerBox" class="answer-box"></article>
+        <div id="sourceList" class="source-list"></div>
+        <div class="panel">
+          <h2>Query History</h2>
+          <div id="queryHistory" class="activity-list"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="assets/js/api_service.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/semantic_query.js"></script>
+</body>
+</html>

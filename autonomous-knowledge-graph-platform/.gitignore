@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.env.local
+instance/
+uploads/
+*.db
+logs/
+node_modules/
+.pytest_cache/
+.venv/
+.deps/
+.localdeps/
+graph_data/raw_documents/*
+!graph_data/raw_documents/.gitkeep

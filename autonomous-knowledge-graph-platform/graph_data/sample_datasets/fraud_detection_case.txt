@@ -1,0 +1,1 @@
+Internal audit flagged unusual procurement approval patterns. Vendor RapidParts LLC received repeated emergency purchase orders from the same department within 48 hours. Compliance marked the pattern as fraud risk with 79% confidence and requested executive review.

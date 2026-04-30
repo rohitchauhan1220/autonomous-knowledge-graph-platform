@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: akg-platform
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: akg-platform
+  template:
+    metadata:
+      labels:
+        app: akg-platform
+    spec:
+      containers:
+        - name: app
+          image: akg-platform:latest
+          ports:
+            - containerPort: 5000
+          envFrom:
+            - secretRef:
+                name: akg-platform-secrets
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: akg-platform
+spec:
+  selector:
+    app: akg-platform
+  ports:
+    - port: 80
+      targetPort: 5000

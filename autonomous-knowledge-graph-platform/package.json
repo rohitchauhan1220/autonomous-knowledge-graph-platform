@@ -1,0 +1,13 @@
+{
+  "name": "autonomous-knowledge-graph-platform",
+  "version": "1.0.0",
+  "description": "Enterprise knowledge graph construction and reasoning MVP.",
+  "scripts": {
+    "start": "python backend/app.py",
+    "test": "pytest backend/tests"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.5.2",
+    "cytoscape": "^3.29.2"
+  }
+}
